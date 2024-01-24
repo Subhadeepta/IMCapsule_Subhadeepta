@@ -5,6 +5,7 @@ import { FaSearch } from "react-icons/fa";
 import Flex from "../../designLayouts/Flex";
 import axios from "axios";
 import { GlobalData } from "../../../context/globalData";
+import { useNavigate } from "react-router-dom";
 
 const HeaderBottom = () => {
   const { category, setCategory } = useContext(GlobalData);
