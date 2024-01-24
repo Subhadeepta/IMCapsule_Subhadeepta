@@ -1,11 +1,8 @@
 import React, { useState, useRef, useEffect, useContext } from "react";
 import { motion } from "framer-motion";
 import { HiOutlineMenuAlt4 } from "react-icons/hi";
-import { FaSearch, FaUser, FaCaretDown, FaShoppingCart } from "react-icons/fa";
+import { FaSearch } from "react-icons/fa";
 import Flex from "../../designLayouts/Flex";
-import { Link, useNavigate } from "react-router-dom";
-import { useSelector } from "react-redux";
-import { paginationItems } from "../../../constants";
 import axios from "axios";
 import { GlobalData } from "../../../context/globalData";
 
@@ -13,7 +10,6 @@ const HeaderBottom = () => {
   const { category, setCategory } = useContext(GlobalData);
   const [show, setShow] = useState(false);
   const [products, setProducts] = useState([]);
-  const [showUser, setShowUser] = useState(false);
   const navigate = useNavigate();
   const ref = useRef();
   console.log(category, "categoriess");
